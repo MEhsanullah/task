@@ -1,0 +1,222 @@
+/* Apply styles to the container */
+body {
+    background-color: #121622;
+    font-family: Open Sans,sans-serif;
+    font-size: 1.6rem;
+    padding-top: 40px;
+}
+
+.container {
+    width: 100%; /* Make the container take the full width of its parent */
+    max-width: 1300px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding on both sides (adjust as needed) */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex; /* Use flexbox for the layout */
+    flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
+}
+
+/* Style the first column */
+.column1 {
+    flex: 1; /* Make the first column flexible */
+    width: 30%; /* Set the width of the first column to 30% */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #0A0B0D; /* Add some space between columns (adjust as needed) */
+}
+
+/* Style the second column */
+.column2 {
+    flex: 2; /* Make the second column flexible */
+    width: 70%; /* Set the width of the second column to 70% */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+    .column1, .column2 {
+        width: 100%; /* Make columns occupy full width on smaller screens */
+        margin-right: 0; /* Remove margin between columns */
+    }
+}
+/* Apply styles to the search container */
+.search-container {
+    margin: 10px 0px;
+    display: flex;
+ /* Add a border bottom */
+    padding: 10px 0; /* Add padding for spacing */
+}
+
+/* Style the search input */
+.search-container input[type="text"] {
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    background-color: #0000;
+    color: #ccc;
+}
+
+/* Style the search button */
+.search-container button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: #5F78A0; /* Change the color of the search icon */
+}
+
+.dropdown_box{
+    width: 80%;
+    margin: auto;
+    border-style: none;
+    background-color: #121622;
+    color: white;
+    margin-top: 20px;
+    
+}
+.dropdown_box select{
+width: 100%;
+padding: 1rem;
+padding-right: 1rem;
+    border-style: none;
+    background-color: #121622;
+    color: white;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 1rem;
+    font-weight: inherit;
+    line-height: inherit;
+
+}
+.dropdown_box option{
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    display: block;
+    white-space-collapse: collapse;
+    text-wrap: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.text-{
+  color: #5F78A0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.text--{
+  color: #5F78A0;
+  font-size: 0.8rem;
+  margin-left: auto; 
+  text-decoration: underline;
+}
+.range_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10% auto;
+  }
+  
+  .sliders_control {
+    position: relative;
+    min-height: 20px;
+  }
+  
+  .form_control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #635a5a;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    background-color: #5F78A0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;  
+  }
+  
+  input[type=range]::-webkit-slider-thumb:hover {
+    background: #f7f7f7;
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+    -webkit-box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  }
+  
+  input[type="text"] {
+    color: #ffffff;
+    background-color: #0000;
+    width: 35px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {  
+     opacity: 1;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #C6C6C6;
+    pointer-events: none;
+  }
+  
+  #fromSlider {
+    height: 0;
+    z-index: 1;
+  }
+ .column2-main{
+  background-color: #C8D5E2;
+  width: 100%;
+  padding: 20px;
+ } 
+ .column2-main:hover{
+  background-color: #ffffff;
+  width: 100%;
+ } 
+.column3{
+width: 50%;
+}
+.column4{
+width: 50%;
+}
+.see-more{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #5F78A0
+}
