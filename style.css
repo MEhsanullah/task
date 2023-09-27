@@ -1,11 +1,17 @@
 /* Apply styles to the container */
+@font-face {
+  font-family: Open Sans;
+  src: url(./open-sans.regular.ttf);
+}
 body {
     background-color: #121622;
     font-family: Open Sans,sans-serif;
     font-size: 1.6rem;
     padding-top: 40px;
 }
-
+p h1 h2 h3 h4 h5 h6{
+  font-family: Open Sans,sans-serif;
+}
 .container {
     width: 100%; /* Make the container take the full width of its parent */
     max-width: 1300px; /* Set a maximum width for the container */
@@ -13,23 +19,29 @@ body {
     padding: 0 20px; /* Add padding on both sides (adjust as needed) */
     box-sizing: border-box; /* Include padding in the width calculation */
     display: flex; /* Use flexbox for the layout */
-    flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
+    flex-wrap: wrap;
+ /* Allow columns to wrap to the next row on smaller screens */
 }
 
 /* Style the first column */
 .column1 {
-    flex: 1; /* Make the first column flexible */
-    width: 30%; /* Set the width of the first column to 30% */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    margin-right: 20px;
-    padding: 10px 20px;
-    background-color: #0A0B0D; /* Add some space between columns (adjust as needed) */
+  width: 27%;
+  box-sizing: border-box;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #0A0B0D;
+  position: fixed;
+  margin-right: 72%;
+  top: 40px; /* Stick to the top of the container */
+  height: auto; /* Let the height be determined by content */
 }
+
 
 /* Style the second column */
 .column2 {
     flex: 2; /* Make the second column flexible */
-    width: 70%; /* Set the width of the second column to 70% */
+    width: 65%;
+    margin-left: 34%; /* Set the width of the second column to 70% */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
@@ -200,23 +212,91 @@ padding-right: 1rem;
     height: 0;
     z-index: 1;
   }
- .column2-main{
-  background-color: #C8D5E2;
-  width: 100%;
-  padding: 20px;
- } 
- .column2-main:hover{
-  background-color: #ffffff;
-  width: 100%;
- } 
-.column3{
-width: 50%;
+  .column2-main:first-child{
+    margin-top: 0px;
+  }
+  .column2-main{
+    background-color: #C8D5E2;
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px;
+  } 
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
-.column4{
-width: 50%;
-}
-.see-more{
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #5F78A0
+  .column2-main:hover{
+    background-color: #ffffff;
+    width: 100%;
+  } 
+  .column3{
+  width: 48%;
+  padding-right: 10px;
+  float: left;
+  }
+  .column4{
+    padding-top: 34px;
+  width: 50%;
+  float: left;
+  }
+  .see-more{
+    font-size: 17px;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #5F78A0
+  }
+  img{
+    height: 80px;
+    width: 120px;
+  }
+  .box{
+    margin-right:5px ;
+    background-color: black;
+    color:#C8D5E2;
+    font-size: 0.8rem;
+    padding: 5px;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  .box1{
+    margin-right:5px ;
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+    font-size: 0.8rem;
+    padding: 5px;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  h4{
+    margin-bottom: 10px;
+  }
+  p{
+    font-size:1rem;
+    margin-bottom: 1rem;
+  }
+  .machinery{
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .column4 i{
+    font-size: 1.1rem;
+  }
+  .column4 h6{
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .column4 p{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    color: #5F78A0;
+    font-size: 1rem;
+  }
+  .border {
+    margin-left: 5px;
+    border-bottom: 1px solid #798291;
+    flex-grow: 1;
+    margin-bottom: 17px;
 }
